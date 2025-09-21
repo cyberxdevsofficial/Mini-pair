@@ -14,44 +14,24 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-/* Container */
-.container {
-  max-width: 650px;
-  width: 100%;
-  padding: 20px;
-  position: relative;
-}
-
-/* Light & Dark Modes */
+/* Dark Mode */
 body.dark {
   background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
   color: white;
 }
 
+/* Light Mode */
 body.light {
   background: #f5f5f5;
-  color: #222;
+  color: #111;
 }
 
-/* Toggle Button */
-#modeToggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: #00ff96;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
 }
 
-#modeToggle:hover {
-  background: #00e685;
-}
-
-/* Headings */
 h1 {
   font-size: 2.5rem;
   font-weight: 600;
@@ -60,33 +40,23 @@ h1 {
 
 .tagline {
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   color: #aaa;
 }
 
-.about, .commands {
-  margin-bottom: 30px;
-}
-
-.about h2, .commands h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-/* Card Section */
 .card {
-  background: rgba(0,0,0,0.2);
+  background: rgba(30, 30, 30, 0.9);
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0px 0px 20px rgba(0, 255, 150, 0.3);
-  margin-bottom: 30px;
-  transition: background 0.3s, box-shadow 0.3s;
+  margin-bottom: 25px;
+  transition: background 0.3s, color 0.3s;
 }
 
 body.light .card {
-  background: #fff;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  background: white;
+  color: #222;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 
 .card h2 {
@@ -100,7 +70,17 @@ body.light .card {
   color: inherit;
 }
 
-/* Button */
+.commands {
+  list-style: none;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.commands li {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
 .btn {
   display: inline-block;
   background: #00ff96;
@@ -116,31 +96,27 @@ body.light .card {
   background: #00e685;
 }
 
-/* Command List */
-.commands ul {
-  list-style: none;
-  padding: 0;
-}
-
-.commands li {
-  font-size: 1rem;
-  margin: 8px 0;
-  padding: 8px;
-  border-radius: 8px;
-  transition: background 0.3s;
-}
-
-body.dark .commands li:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-body.light .commands li:hover {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-/* Footer */
 footer {
   margin-top: 20px;
   font-size: 0.9rem;
   color: #888;
 }
+
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  background: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+body.light .theme-toggle {
+  background: #ddd;
+  color: #111;
+  }
